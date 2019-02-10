@@ -86,7 +86,10 @@ const styles = theme => ({
     paddingTop: "35vh"
   },
   fab: {
-    marginLeft: `calc(50% - ${theme.spacing.unit * 7 + 1}px)`,
+    marginLeft: `calc(50% - ${theme.spacing.unit * 9 + 1}px)`,
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: `calc(50% - ${theme.spacing.unit * 9 + 1}px)`,
+    },
     marginTop: theme.spacing.unit * 5
   },
 });
@@ -149,7 +152,7 @@ class MiniDrawer extends React.Component {
         >
           <List>
             {
-              ["Home", "Details", "Map"].map((k, i) => (
+              ["Home", "Details"].map((k, i) => (
                 <div key={i} onClick={() => {
                   const k_l = k.toLocaleLowerCase();
                   this.handleSelection(k_l);
@@ -157,7 +160,7 @@ class MiniDrawer extends React.Component {
                 }}>
                   <ListItem button key={k}>
                     <ListItemIcon>{this.state.icons[k.toLocaleLowerCase()]}</ListItemIcon>
-                    <ListItemText primary={k} />
+                    <ListItemText primary={k} style={{fontFamily:"Lobster", fontSize:"large"}}/>
                   </ListItem>
                 </div>
               ))
@@ -169,13 +172,10 @@ class MiniDrawer extends React.Component {
             <div ref='home' className={classes.first}>
               <Landing />
               <Countdown/>
-              <Button className={classes.fab} size="large" color="primary" variant="outlined" href={"https://www.google.com/maps/dir/?api=1&destination=B+D+Reddy+Gardens+Hyderabad+Telangana&dir_action=navigate"} target="_blank">Navigate to Venue</Button>
+              <Button className={classes.fab} size="large" color="primary" variant="outlined" href={"https://www.google.com/maps/dir/?api=1&destination=B+D+Reddy+Gardens+Hyderabad+Telangana&dir_action=navigate"} target="_blank">Take me to Wedding Venue</Button>
             </div>
             <div ref='details' className={classes.rest}>
               <Details />
-            </div>
-            <div ref='map' className={classes.rest}>
-              <Maps />
             </div>
           </div>
         </main>

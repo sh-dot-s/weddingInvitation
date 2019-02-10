@@ -40,7 +40,7 @@ class Landing extends React.Component {
             <div className={classes.root}>
                 <div className={classes.card} elevation={this.state.elevation} onMouseEnter={this.upElevation} onMouseLeave={this.downElevation}>
                     
-                        <div className={classes.names}>Sindhuja & Naga Raj</div>
+                        <div className={classes.names}>Sindhuja & Naga Raju</div>
                         are
                         <div className={classes.mess}>Tying the Knot</div>
                     

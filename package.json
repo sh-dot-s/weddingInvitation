@@ -1,5 +1,5 @@
 {
-  "name": "react-track-my-expense",
+  "name": "dasari-wedding",
   "version": "1.0.0",
   "description": "",
   "main": "bundle.js",
@@ -19,7 +19,6 @@
     "@material-ui/icons": "latest",
     "css-loader": "^0.28.7",
     "express": "^4.16.3",
-    "google-maps-react": "^2.0.2",
     "img-loader": "^2.0.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^7.0.0",
@@ -27,12 +26,9 @@
     "react-addons-shallow-compare": "^15.6.2",
     "react-countdown-now": "^2.1.0",
     "react-dom": "latest",
-    "react-map-gl": "^4.0.10",
-    "react-native-open-maps": "^0.3.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
-    "uuid": "^3.2.1",
     "webpack": "^3.10.0"
   },
   "devDependencies": {
